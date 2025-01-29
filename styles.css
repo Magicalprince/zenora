@@ -1,0 +1,155 @@
+:root {
+    --primary-color: #64B6AC;
+    --secondary-color: #C0FDFB;
+    --accent-color: #DDBDD5;
+    --text-color: #1A535C;
+    --background-color: #F7F9F9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comfortaa', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.logo span:hover {
+    transform: translateY(-5px);
+}
+
+.z { color: #FF6B6B; }
+.e { color: #4ECDC4; }
+.n { color: #45B7D1; }
+.o { color: #96CEB4; }
+.r { color: #FFEEAD; }
+.a { color: #D4A5A5; }
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+}
+
+.animation-container {
+    width: 400px;
+    height: 400px;
+    margin-bottom: 2rem;
+}
+
+.hero-text {
+    max-width: 800px;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    opacity: 0.9;
+}
+
+.quote-section {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+}
+
+.quote-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.quote-container h2 {
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+blockquote {
+    font-size: 1.5rem;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.quote-text {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.quote-author {
+    font-size: 1rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.animation-container {
+    animation: float 6s ease-in-out infinite;
+}
